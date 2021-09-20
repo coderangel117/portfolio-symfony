@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bienvenue{% endblock %}
+{% block title %}{{"Bienvenue"|trans}}{% endblock %}
 
 {% block body %}
 <style>
@@ -9,7 +9,28 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ titre }}! ✅</h1>
-
+    <h1>{{ "hello"|trans}} {{ titre }}! </h1>
 </div>
-{% endblock %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">{{ "Accueil"|trans}} </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="realisations.html.twig">{{ "Mes réalisations"|trans}} </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cv.html.twig">{{ "Mon CV"|trans}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html.twig">{{ "Me contacter"|trans}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>{% endblock %}

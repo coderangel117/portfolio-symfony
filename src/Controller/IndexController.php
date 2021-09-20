@@ -10,6 +10,7 @@ class IndexController extends AbstractController
 {
     /**
      * @Route("/", name="index")
+     * @Route("/{_locale}", name="index")
      */
     public function index(): Response
     {
