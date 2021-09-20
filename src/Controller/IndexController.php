@@ -20,6 +20,7 @@ class IndexController extends AbstractController
     }
     /**
     * @Route("/cv", name="cv")
+     * @Route("/{_locale}/cv", name="cv")
     */
     public function cv(): Response
     {
@@ -29,6 +30,7 @@ class IndexController extends AbstractController
     }
     /**
      * @Route("/realisations", name="realisations")
+     *@Route("/{_locale}/realisations", name="realisations")
      */
     public function realisations(): Response
     {
@@ -38,6 +40,7 @@ class IndexController extends AbstractController
     }
     /**
      * @Route("/contact", name="contact")
+     * @Route("/{_locale}/contact", name="contact")
      */
     public function contact(): Response
     {
