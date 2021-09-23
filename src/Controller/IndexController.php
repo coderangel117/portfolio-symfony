@@ -5,17 +5,18 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Form\ContactType;
 
 class IndexController extends AbstractController
 {
     /**
      * @Route("/", name="index")
-     * @Route("/{_locale}", name="index")
+     * @Route("/{_locale}"/, name="index")
      */
     public function index(): Response
     {
         return $this->render('index/index.html.twig', [
-            'titre' => 'IndexController',
+            'titre' => 'Accueil',
         ]);
     }
     /**
@@ -36,16 +37,6 @@ class IndexController extends AbstractController
     {
         return $this->render('index/realisations.html.twig', [
             'titre' => 'Mes réalisations',
-        ]);
-    }
-    /**
-     * @Route("/contact", name="contact")
-     * @Route("/{_locale}/contact", name="contact")
-     */
-    public function contact(): Response
-    {
-        return $this->render('index/contact.html.twig', [
-            'titre' => 'Me contacter',
         ]);
     }
 }
